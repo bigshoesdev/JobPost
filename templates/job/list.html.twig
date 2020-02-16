@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {#    <table class="table text-center">#}
+    {#        <tr>#}
+    {#            <th class="active text-center">City</th>#}
+    {#            <th class="active text-center">Position</th>#}
+    {#            <th class="active text-center">Company</th>#}
+    {#        </tr>#}
+
+    {#        {% for job in jobs %}#}
+    {#            <tr>#}
+    {#                <td>{{ job.location }}</td>#}
+    {#                <td>#}
+    {#                    <a href="{{ path('job.show', {id: job.id}) }}">#}
+    {#                        {{ job.position }}#}
+    {#                    </a>#}
+    {#                </td>#}
+    {#                <td>{{ job.company }}</td>#}
+    {#            </tr>#}
+    {#        {% endfor %}#}
+    {#    </table>#}
+    {% include 'job/_job_history.html.twig' with {'historyJobs': historyJobs} only %}
+
+    {% for category in categories %}
+        <h4>
+            <a href="{{ path('category.show', {slug: category.slug}) }}">{{ category.name }}</a>
+        </h4>
+
+        {% include 'job/table.html.twig' with {
+            'jobs': category.activeJobs|slice(0, max_jobs_on_homepage)
+        } only %}
+    {% endfor %}
+{% endblock %}

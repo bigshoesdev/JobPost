@@ -1,0 +1,11 @@
+twig:
+    paths: ['%kernel.project_dir%/templates']
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+    globals:
+        max_jobs_on_homepage: '%max_jobs_on_homepage%'
+        jobs_web_directory: '%jobs_web_directory%'
+        locales: '%locales%'
+    form_themes:
+        - 'bootstrap_3_horizontal_layout.html.twig'
+

@@ -1,0 +1,18 @@
+1. composer require symfony/orm-pack #DB Mapping
+2. composer require sensio/framework-extra-bundle #Parmater Mapping
+3. composer require twig
+4. php bin/console doctrine:migration:diff  #Make Migration
+5. php bin/console doctrine:migration:migrate
+6. composer require --dev doctrine/doctrine-fixtures-bundle  #Fixtures
+7. php bin/console doctrine:fixtures:load
+8. composer require symfony/expression-language
+9. composer require stof/doctrine-extensions-bundle #Slug
+10. composer require knplabs/knp-paginator-bundle #Pagination
+11. composer require symfony/form
+12. composer require symfony/validator
+13. composer require symfony/asset
+14. composer require symfony/security-csrf
+15. composer require --dev symfony/profiler-pack
+16. composer require symfony/security-bundle
+17. composer require friendsofsymfony/user-bundle ~2.1
+18. composer require symfony/templating
